@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jelajah Sejarah Nusantara</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- START SCREEN -->
+  <section id="start-screen" class="screen active">
+    <div class="card start-card">
+      <h1>JELAJAH SEJARAH NUSANTARA</h1>
+      <p>Halo, Sobat! Yuk pelajari sejarah kota-kota di Nusantara lewat peta interaktif.</p>
+      <div class="controls">
+        <button id="btn-start" class="btn primary">Mulai</button>
+        <button id="btn-sound-toggle" class="btn">Suara: On</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PETA INDONESIA -->
+  <section id="peta-indonesia" class="screen">
+    <header class="topbar">
+      <button class="btn" id="btn-back-to-start">Kembali</button>
+      <h2>JELAJAH SEJARAH NUSANTARA</h2>
+      <div></div>
+    </header>
+
+    <div class="peta-wrapper">
+      <img id="peta-main" src="img/peta.jpeg" alt="Peta Indonesia" />
+      <button class="pulau-btn" data-pulau="sumatra" style="left:8%; top:44%;">SUMATRA</button>
+      <button class="pulau-btn" data-pulau="jawa" style="left:40%; top:68%;">JAWA</button>
+      <button class="pulau-btn" data-pulau="kalimantan" style="left:38%; top:36%;">KALIMANTAN</button>
+      <button class="pulau-btn" data-pulau="sulawesi" style="left:58%; top:40%;">SULAWESI</button>
+      <button class="pulau-btn" data-pulau="papua" style="left:86%; top:44%;">PAPUA</button>
+    </div>
+  </section>
+
+  <!-- PETA PULAU -->
+  <section id="peta-pulau" class="screen">
+    <header class="topbar">
+      <button class="btn" id="btn-back-to-peta">Kembali</button>
+      <h2 id="judul-pulau">Pulau</h2>
+      <div></div>
+    </header>
+
+    <div class="peta-wrapper">
+      <img id="peta-pulau-img" src="img/sumatra_prov.png" alt="Peta Pulau" />
+      <div id="provinsi-dots" class="overlay"></div>
+    </div>
+  </section>
+
+  <!-- PETA PROVINSI -->
+  <section id="peta-provinsi" class="screen">
+    <header class="topbar">
+      <button class="btn" id="btn-back-to-pulau">Kembali</button>
+      <h2 id="judul-provinsi">Provinsi</h2>
+      <div></div>
+    </header>
+
+    <div class="peta-wrapper">
+      <img id="peta-prov-img" src="img/sumatra_prov.png" alt="Peta Provinsi" />
+      <div id="kota-dots" class="overlay"></div>
+    </div>
+  </section>
+
+  <!-- MODAL KUIS -->
+  <div id="kuis-modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close-modal btn" id="close-kuis">×</button>
+      <h3 id="kuis-title">Judul Kuis</h3>
+      <div id="kuis-question">Pertanyaan ...</div>
+      <div id="kuis-choices" class="choices"></div>
+
+      <div class="kuis-footer">
+        <button id="btn-submit" class="btn primary">Jawab</button>
+      </div>
+
+      <div id="kuis-result" class="result hidden"></div>
+    </div>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="bg-music" loop>
+    <source src="audio/musik_game.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
